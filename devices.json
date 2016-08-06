@@ -1,0 +1,14 @@
+{
+  "devices":[
+      {
+        "IpAddress":"1.1.1.1",
+        "ConnectState":"connected",
+        "port":"8080"
+      },
+      {
+        "IpAddress":"1.1.1.2",
+        "ConnectState":"connected",
+        "port":"8080"
+      }
+  ]
+}
