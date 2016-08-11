@@ -1,35 +1,35 @@
 require './ConnectState.rb'
 
 class AdbDevice
-  include ConnectState
-  def initialize(ipaddress, port)
-    @IpAddress = ipaddress
-    @ConnectState = ConnectState::DISCONNECTED
-    @port = port
-  end
-
-  def getIpAddress
-    return @IpAddress
-  end
-
-  def getConnectState
-    return @ConnectState
-  end
-
-  def connect
-    puts "Connecting #{@IpAddress}:#{@port}"
-    if @port.nil?
-      result = `adb connect #{@IpAddress}`
-    else
-      result = `adb connect #{@IpAddress}:#{@port}`
+    include ConnectState
+    def initialize(ipaddress, port)
+        @IpAddress = ipaddress
+        @ConnectState = ConnectState::DISCONNECTED
+        @port = port
     end
 
-    result.chomp!
-    if result.include?("unable")
-      @ConnectState = ConnectState::DISCONNECTED
-    else
-      @ConnectState = ConnectState::CONNECTED
+    def getIpAddress
+        @IpAddress
     end
-    return @ConnectState
-  end
+
+    def getConnectState
+        @ConnectState
+    end
+
+    def connect
+        puts "Connecting #{@IpAddress}:#{@port}"
+        result = if @port.nil?
+                     `adb connect #{@IpAddress}`
+                 else
+                     `adb connect #{@IpAddress}:#{@port}`
+                 end
+
+        result.chomp!
+        @ConnectState = if result.include?('unable')
+                            ConnectState::DISCONNECTED
+                        else
+                            ConnectState::CONNECTED
+                        end
+        @ConnectState
+    end
 end
