@@ -1,5 +1,5 @@
 module ConnectState
-  CONNECTED = "connected"
-  DISCONNECTED = "disconnected"
-  UNKNONW = "unknown"
+    CONNECTED = 'connected'.freeze
+    DISCONNECTED = 'disconnected'.freeze
+    UNKNONW = 'unknown'.freeze
 end
