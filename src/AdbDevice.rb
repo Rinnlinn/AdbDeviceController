@@ -16,6 +16,10 @@ class AdbDevice
         @ConnectState
     end
 
+    def getPort
+      @port
+    end
+
     def connect
         puts "Connecting #{@IpAddress}:#{@port}"
         result = if @port.nil?
