@@ -1,14 +1,18 @@
 {
-  "devices":[
-      {
-        "IpAddress":"192.168.1.1",
-        "ConnectState":"connected",
-        "port":"8080"
-      },
-      {
-        "IpAddress":"192.168.1.2",
-        "ConnectState":"connected",
-        "port":"8081"
-      }
-  ]
-}
+    "devices": [{
+        "IpAddress": "192.168.1.1",
+        "port": 8080,
+        "ConnectState": "disconnected"
+    }, {
+        "IpAddress": "192.168.1.2",
+        "port": 8081,
+        "ConnectState": "disconnected"
+    }, {
+        "IpAddress": "192.168.1.1.3",
+        "port": 8082,
+        "ConnectState": "disconnected"
+    }, {
+        "IpAddress": "192.168.1.1.3",
+        "port": 8082,
+        "ConnectState": "disconnected"
+    }]

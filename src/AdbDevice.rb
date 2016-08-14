@@ -17,7 +17,12 @@ class AdbDevice
     end
 
     def getPort
-      @port
+        @port
+    end
+
+    def makeDeviceDataMap
+        data = { 'IpAddress' => @IpAddress, 'port' => @port, 'ConnectState' => @ConnectState }
+        data
     end
 
     def connect
