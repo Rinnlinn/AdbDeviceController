@@ -6,8 +6,8 @@ require_relative './DeviceListTable.rb'
 fxml_root Dir.pwd + '/ui'
 class AdbController < JRubyFX::Application
     def start(stage)
-      stage.fxml DeviceListWindow
-      stage.show
+        stage.fxml DeviceListWindow
+        stage.show
     end
 end
 
