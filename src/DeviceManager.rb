@@ -1,5 +1,5 @@
-require './AdbDevice.rb'
-require './DeviceJsonReader.rb'
+require_relative './AdbDevice.rb'
+require_relative './DeviceJsonReader.rb'
 
 class DeviceManager
     def initialize
