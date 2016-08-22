@@ -3,7 +3,7 @@ require './DeviceManager.rb'
 
 class DeviceListWindow
     include JRubyFX::Controller
-    fxml '../ui/device_list.fxml'
+    fxml 'device_list.fxml'
     module J
         include_package 'javafx.beans.property'
     end
@@ -34,7 +34,7 @@ class DeviceListWindow
 
         def initialize(ip_address, port, connect_state)
             @ip_address = J::SimpleStringProperty.new(ip_address)
-            @port = J::SimpleStringProperty.new(port)
+            @port = J::SimpleStringProperty.new(port.to_s)
             @connect_state = J::SimpleStringProperty.new(connect_state)
         end
     end
