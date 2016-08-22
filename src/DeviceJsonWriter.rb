@@ -1,5 +1,5 @@
-require './JsonWriter.rb'
-require './AdbDevice.rb'
+require_relative './JsonWriter.rb'
+require_relative './AdbDevice.rb'
 
 class DeviceJsonWriter < JsonWriter
     def writeDeviceData(devices)
@@ -9,6 +9,6 @@ class DeviceJsonWriter < JsonWriter
         end
 
         json_data = { 'devices' => device_data }
-        writeFile('../devices.json', json_data)
+        writeFile('./devices.json', json_data)
     end
 end

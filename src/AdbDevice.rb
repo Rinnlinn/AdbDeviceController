@@ -1,4 +1,4 @@
-require './ConnectState.rb'
+require_relative './ConnectState.rb'
 
 class AdbDevice
     include ConnectState

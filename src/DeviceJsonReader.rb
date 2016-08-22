@@ -1,8 +1,8 @@
-require './JsonReader.rb'
-require './AdbDevice.rb'
+require_relative './JsonReader.rb'
+require_relative './AdbDevice.rb'
 class DeviceJsonReader < JsonReader
     def readDeviceData
-        json_data = readFile('../devices.json')
+        json_data = readFile('./devices.json')
         devices_data = json_data['devices']
         devices = []
         devices_data.each do |device_data|

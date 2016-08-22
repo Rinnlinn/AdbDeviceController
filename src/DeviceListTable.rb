@@ -1,5 +1,5 @@
-require './AdbDevice.rb'
-require './DeviceManager.rb'
+require_relative './AdbDevice.rb'
+require_relative './DeviceManager.rb'
 
 class DeviceListWindow
     include JRubyFX::Controller
