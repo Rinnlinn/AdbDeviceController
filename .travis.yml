@@ -1,6 +1,10 @@
 language: ruby
 rvm:
-  - 2.3.1
+- 2.3.1
 script: rspec
 gemfile:
-  - Gemfile
+- Gemfile
+notifications:
+  email: false
+  slack:
+    secure: N6y2T5kitnaBaI557c4DsFr4YJSsaSqQmyLjbRIwrs3GYa3kjr9rbOAM/yo93lC+0gL8DxRNfPVLEmOXRzTp9bE7pfXbVNwvIMbwIZ8gtF5SSP168pyzq2gRwiraaq/gxyvqFGEkMTiHndcYLoIdNf1aik4EpHcyMsT2XjQ0WKF/qTJ++/yQNEHYRr30N9d+PTZ1t+Fbpeh0J0bxA11E5KDaKQqbsHzbg9vzikvGUeyScrPkArp6RxdPgIUcF19RAoYMHrC67rBxoOzct1EtzNL07oJCLxM7vylIofkdrRc2MoKuCag0/PajiL9xsdOdVnKG77TxTGYd1Ytqvj/SyzNV88hZjz1o0OPL2pDaLt6xP8wB3LhD0wnxMsDkP87S9Zpvtsk4cmUBkoF1nf0Hq6pBG93S5+8NoQNj9rgiBqwdVssfz7o9QyX+2YxuPR4fmMiPT0JrOD8vOrFKdMHzhpVm+Kpjm4gfYzvHASSdGh032WCo9l04ulyGNNz5meoqhjmaY/YvkvQIAW7cQGV7STEbyNH+3b854sRsu+TfzDNrNI9e4McRfthL3ED6I5TN6rSE3pLLdBxFWivHWZ97m4MAW33XSBgd0v+8/sdeMooPBqX+XlYosWAtOsk6rvwNh/1+O056sNwdtrjEd4tnyniAKYYH+uuK0fVJ+nRsUK8=
