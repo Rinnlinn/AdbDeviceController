@@ -4,7 +4,7 @@ require_relative './DeviceJsonReader.rb'
 class DeviceManager
     def initialize
         djr = DeviceJsonReader.new
-        @@devices = djr.readDeviceData("./devices.json")
+        @@devices = djr.readDeviceData('./devices.json')
     end
 
     def getDevices
@@ -16,5 +16,9 @@ class DeviceManager
             @@devices.push(device)
         end
         @@devices
+    end
+
+    def add_device(device)
+        @@devices.push(device)
     end
 end
