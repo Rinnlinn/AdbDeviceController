@@ -8,11 +8,11 @@
         "port": 8081,
         "ConnectState": "disconnected"
     }, {
-        "IpAddress": "192.168.1.1.3",
+        "IpAddress": "192.168.1.3",
         "port": 8082,
         "ConnectState": "disconnected"
     }, {
-        "IpAddress": "192.168.1.1.3",
+        "IpAddress": "192.168.1.4",
         "port": 8082,
         "ConnectState": "disconnected"
     }]
