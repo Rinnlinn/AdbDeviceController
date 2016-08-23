@@ -8,19 +8,19 @@ class AdbDevice
         @port = port
     end
 
-    def getIpAddress
+    def ip_address
         @IpAddress
     end
 
-    def getConnectState
+    def connect_state
         @ConnectState
     end
 
-    def getPort
+    def port
         @port
     end
 
-    def makeDeviceDataMap
+    def make_device_data_map
         data = { 'IpAddress' => @IpAddress, 'port' => @port, 'ConnectState' => @ConnectState }
         data
     end

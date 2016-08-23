@@ -17,11 +17,11 @@ class DeviceListWindow
         @col_connect_state.cell_value_factory = ->(v) { v.value.connect_state }
 
         dm = DeviceManager.new
-        devices = dm.getDevices
+        devices = dm.get_devices
         devices.each do |device|
-            ip_address = device.getIpAddress
-            port = device.getPort
-            connect_state = device.getConnectState
+            ip_address = device.ip_address
+            port = device.port
+            connect_state = device.connect_state
             @table.items << TableRecord.new(ip_address, port, connect_state)
         end
     end
