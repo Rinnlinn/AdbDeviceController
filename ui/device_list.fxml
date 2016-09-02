@@ -16,9 +16,9 @@
     </TableView>
     <HBox prefHeight="27.0" prefWidth="584.0">
       <children>
-        <TextArea fx:id="input_id_address" maxWidth="-Infinity" prefHeight="27.0" prefWidth="369.0" promptText="Input IpAddress" wrapText="true" />
-        <TextArea fx:id="Input_port" maxWidth="-Infinity" prefHeight="27.0" prefWidth="146.0" promptText="Input Port" wrapText="true" />
-        <Button fx:id="add_button" mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="ADD" textAlignment="LEFT" textOverrun="CLIP" />
+        <TextArea fx:id="input_ip_address" maxWidth="-Infinity" prefHeight="27.0" prefWidth="369.0" promptText="Input IpAddress" wrapText="true" />
+        <TextArea fx:id="input_port" maxWidth="-Infinity" prefHeight="27.0" prefWidth="146.0" promptText="Input Port" wrapText="true" />
+        <Button fx:id="add_button" mnemonicParsing="false" onAction="#add_device_button" prefHeight="27.0" prefWidth="128.0" text="ADD" textAlignment="LEFT" textOverrun="CLIP" />
       </children>
     </HBox>
     <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="584.0" text="Connect" />
