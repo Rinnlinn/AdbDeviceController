@@ -6,24 +6,24 @@
 <?import javafx.scene.layout.*?>
 
 <VBox fillWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="468.0" spacing="8.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
-  <children>
-    <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-      <columns>
-        <TableColumn prefWidth="200.0" text="IP" fx:id="col_ip_address" />
-        <TableColumn prefWidth="200.0" resizable="false" text="CONNECT STATE" fx:id="col_connect_state" />
-        <TableColumn prefWidth="50.0" text="PORT" fx:id="col_port" />
-      </columns>
-    </TableView>
-    <HBox prefHeight="27.0" prefWidth="584.0">
-      <children>
-        <TextArea fx:id="input_ip_address" maxWidth="-Infinity" prefHeight="27.0" prefWidth="369.0" promptText="Input IpAddress" wrapText="true" />
-        <TextArea fx:id="input_port" maxWidth="-Infinity" prefHeight="27.0" prefWidth="146.0" promptText="Input Port" wrapText="true" />
-        <Button fx:id="add_button" mnemonicParsing="false" onAction="#add_device_button" prefHeight="27.0" prefWidth="128.0" text="ADD" textAlignment="LEFT" textOverrun="CLIP" />
-      </children>
-    </HBox>
-    <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="584.0" text="Connect" />
-  </children>
-  <padding>
-    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
-  </padding>
+    <children>
+        <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn prefWidth="200.0" text="IP" fx:id="col_ip_address"/>
+                <TableColumn prefWidth="200.0" resizable="false" text="CONNECT STATE" fx:id="col_connect_state"/>
+                <TableColumn prefWidth="50.0" text="PORT" fx:id="col_port"/>
+            </columns>
+        </TableView>
+        <HBox prefHeight="27.0" prefWidth="584.0">
+            <children>
+                <TextArea fx:id="input_ip_address" maxWidth="-Infinity" prefHeight="27.0" prefWidth="369.0" promptText="Input IpAddress" wrapText="true"/>
+                <TextArea fx:id="input_port" maxWidth="-Infinity" prefHeight="27.0" prefWidth="146.0" promptText="Input Port" wrapText="true"/>
+                <Button fx:id="add_button" mnemonicParsing="false" onAction="#add_device_button" prefHeight="27.0" prefWidth="128.0" text="ADD" textAlignment="LEFT" textOverrun="CLIP"/>
+            </children>
+        </HBox>
+        <Button fx:id="connect_button" mnemonicParsing="false" onAction="#connect_device_button" prefHeight="27.0" prefWidth="584.0" text="Connect"/>
+    </children>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+    </padding>
 </VBox>
