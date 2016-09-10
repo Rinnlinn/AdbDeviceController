@@ -22,11 +22,13 @@ class DeviceListWindow
         dm = DeviceManager.new
         devices = dm.get_devices
         devices.each do |device|
-            ip_address = device.ip_address
-            port = device.port
-            connect_state = device.connect_state
-            @table.items << TableRecord.new(ip_address, port, connect_state)
+            @table.items << TableRecord.new(device)
         end
+    end
+
+    def connect_device_button
+        selected_device = @table.get_selection_model.get_selected_item.adb_device
+        selected_device.connect
     end
 
     def add_device_button
@@ -38,14 +40,15 @@ class DeviceListWindow
 
     # テーブル1レコードぶんのデータクラス
     class TableRecord
+        attr_reader :adb_device
         attr_reader :ip_address
         attr_reader :port
         attr_reader :connect_state
-
-        def initialize(ip_address, port, connect_state)
-            @ip_address = J::SimpleStringProperty.new(ip_address)
-            @port = J::SimpleStringProperty.new(port.to_s)
-            @connect_state = J::SimpleStringProperty.new(connect_state)
+        def initialize(device)
+            @adb_device = device
+            @ip_address = J::SimpleStringProperty.new(device.ip_address)
+            @port = J::SimpleStringProperty.new(device.port.to_s)
+            @connect_state = J::SimpleStringProperty.new(device.connect_state)
         end
     end
 end
